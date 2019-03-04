@@ -51,9 +51,9 @@ python manage.py runserver
 |Search icon | Search on a category |images are displayed |
 
 ## Prerequisites
-You need the following to work on the project: -Python version 3.6 -Flask -Pip -virtualenv -A text Editor
+You need the following to work on the project: -Python version 3.6 -Django -Pip -virtualenv -A text Editor
 
-## Link to Live Website https://lony-press.herokuapp.com/
+## Link to Live Website
 
 ## Known Bugs
 None known at the moment.
@@ -61,7 +61,7 @@ None known at the moment.
 ## Technologies Used
 * Python
 * HTML
-* Flask micro-framework
+* Django micro-framework
 * Bootstrap(used for styling)
 
 ## License
