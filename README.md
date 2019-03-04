@@ -1,5 +1,5 @@
 # Collage
-This is a website that allows users to post blogs and comment on them 3th March 2019
+This is a website made for sharing photos. 3th March 2019
 ### By Lorna wanjiku
 
 ## Description
@@ -9,15 +9,34 @@ This is a website that allows app's users to view pictures and search for catego
 Users can view pictures.
 Users can search for category pictures.
 Users can select a location of their interest to view pictures.
-Writers can create new blog posts
 
 ## Setup/Installation Requirements
 To start using this project use the following commands:
 
-* git clone https://github.com/wanjikuciku/blog.git
-* cd Blog
+* git clone https://github.com/wanjikuciku/piktures.git
+* cd piktures
 * atom .
 * code . (this is if Visual Studio Code is your preferred text editor)
+
+1.The repo comes in a zipped or compressed format. Extract to your prefered location and open it.
+
+2.open your terminal and navigate to gallery then create a virtual environment.For detailed guide refer here
+
+3.To run the app, you'll have to run the following commands in your terminal
+
+pip install -r requirements.txt
+On your terminal,Create database gallery using the command below.
+
+CREATE DATABASE gallery;
+Migrate the database using the command below
+
+python3.6 manage.py migrate
+Then serve the app, so that the app will be available on localhost:8000, to do this run the command below
+
+python manage.py runserver
+Use the navigation bar/navbar/navigation pane/menu to navigate and explore the app.
+
+
 
  To run this program
 * Create a virtual environment by python3.6 -m venv --without-pip virtual then activate the virtual environment
