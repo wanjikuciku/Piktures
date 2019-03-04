@@ -3,12 +3,12 @@ This is a website that allows users to post blogs and comment on them 3th March 
 ### By Lorna wanjiku
 
 ## Description
-This is a website that allows app's users to post blogs and view blogs.
+This is a website that allows app's users to view pictures and search for categories and locations.
 
 ## Specifications
-Users can view most recent blog posts
-Users can comment on blog posts
-Users can register and login to become writers
+Users can view pictures.
+Users can search for category pictures.
+Users can select a location of their interest to view pictures.
 Writers can create new blog posts
 
 ## Setup/Installation Requirements
