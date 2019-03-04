@@ -1,1 +1,1 @@
-web: gunicorn piktures.wsgi --log-file -
+web: gunicorn Piktures.wsgi --log-file -
