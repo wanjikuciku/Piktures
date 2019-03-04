@@ -20,7 +20,7 @@ To start using this project use the following commands:
 
 * The repo comes in a zipped or compressed format. Extract to your prefered location and open it.
 
-* open your terminal and navigate to gallery then create a virtual environment.For detailed guide refer here
+* open your terminal and navigate to piktures then create a virtual environment.For detailed guide refer here
 
 * To run the app, you'll have to run the following commands in your terminal
 
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 * On your terminal,Create database gallery using the command below.
 
-CREATE DATABASE gallery;
+CREATE DATABASE piktures;
 
 * Migrate the database using the command below
 
