@@ -1,137 +1,66 @@
 from django.test import TestCase
-from .models import Image,Location,Category
-
+from .models import Image,Category,Location
 # Create your tests here.
-class ImageTestCases(TestCase):
-    """
-    This is the class we will use to test the images
-    """
-    
+
+class CategoryTestCase(TestCase):
+
     def setUp(self):
-        """
-        This will create a new image before each test case
-        """
-        food = Category(name = "food")
-        food.save()
-        africa = Location(name = "Africa")
-        africa.save()
-        self.new_image = Image(name = "image",description = "h",location = africa,category = funny)
-    
+        self.food = Category(name = 'Food')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.food, Category))
+
     def tearDown(self):
-        """
-        This will clear the db after each test
-        """
-        Image.objects.all().delete()
         Category.objects.all().delete()
-        Location.objects.all().delete()
-
-    def test_instance(self):
-        """
-        This will test whether the new image created is an instance of the Image class
-        """
-        self.assertTrue(isinstance(self.new_image, Image))
-
-    def test_init(self):
-        """
-        This will test whether the new image is instantiated correctly
-        """
-        self.assertTrue(self.new_image.image_name == "image")
-
-    def test_save_image(self):
-        """
-        This will test whether the new image is added to the db
-        """
-        self.new_image.save_image()
-        self.assertTrue(len(Image.objects.all()) > 0)
-
-    def test_delete_image(self):
-        """
-        This will test whether the new image is deleted from the db
-        """
-        self.new_image.save_image()
-        self.assertTrue(len(Image.objects.all()) > 0)
-        
-
-    def test_get_images(self):
-        """
-        This will test whether the get_image will return all the images
-        """
-        self.new_image.save_image()
-        self.assertTrue(len(Image.get_images()) == 1)
-
-    def test_search_image(self):
-        """
-        This will test whether the image is queried based on category
-        """
-        self.new_image.save_image()
-        self.assertTrue(len(Image.search_image("funny")) > 0)
-
-    def test_filter_by_location(self):
-        """
-        This will test whether the filter_by_loc will return photos in a certain category
-        """
-        self.new_image.save_image()
-        self.assertTrue(len(Image.filter_by_location("Africa")) == 1)
-
-class LocationTestCases(TestCase):
-    """
-    This is the class we will use to test the Locations
-    """
-    def setUp(self):
-        self.new_location = Location(name = "Moringa")
-
-    def tearDown(self):
-        """
-        This will clear the db after each test
-        """
-        Location.objects.all().delete()
-
-    def test_instance(self):
-        """
-        This will test whether the location created is an instance of the Location class
-        """
-        self.assertTrue(isinstance(self.new_location,Location))
-    def test_init(self):
-        """
-        This will test whether the new location is instantiated correctly
-        """
-        self.assertTrue(self.new_location.name == "Moringa")
-
-    def test_save_location(self):
-        """
-        This will test whether the new location is added to the db
-        """
-        self.new_location.save_location()
-        self.assertTrue(len(Location.objects.all()) == 1)
-
-class CategoryTestCases(TestCase):
-    """
-    This is the class we will use to test the Locations
-    """
-    def setUp(self):
-        self.new_category = Category(name = "Moringa")
-
-    def tearDown(self):
-        """
-        This will clear the db after each test
-        """
-        Category.objects.all().delete()
-
-    def test_instance(self):
-        """
-        This will test whether the category created is an instance of the Category class
-        """
-        self.assertTrue(isinstance(self.new_category,Category))
-
-    def test_init(self):
-        """
-        This will test whether the new category is instantiated correctly
-        """
-        self.assertTrue(self.new_category.name == "Moringa")
 
     def test_save_category(self):
-        """
-        This will test whether the new category is added to the db
-        """
+        self.food.save_category()
+        categories = Category.objects.all()
+        self.assertTrue(len(categories) > 0)
+
+    def test_delete_category(self):
+        self.food.delete_category('Food')
+        categories = Category.objects.all()
+        self.assertTrue(len(categories) == 0)
+
+class LocationTestCase(TestCase):
+    def setUp(self):
+        self.nyali = Location(name = 'Nyali')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.nyali, Location))
+
+    def tearDown(self):
+        Location.objects.all().delete()
+
+    def test_save_location(self):
+        self.nyali.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0)
+
+    def test_delete_location(self):
+        self.nyali.delete_location('Nyali')
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) == 0)
+
+class ImageTestCase(TestCase):
+    def setUp(self):
+        # Creating a new category and saving it
+        self.new_category = Category(name = 'Food')
         self.new_category.save_category()
-        self.assertTrue(len(Category.objects.all()) == 1)
+
+        # Creat a new location and saving it
+        self.new_location = Location(name = 'Nyali')
+        self.new_location.save_location()
+
+        self.new_image = Image(image_name = 'Test Image',image_description = 'Test Description',image_category = self.new_category,image_location = self.new_location)
+        self.new_image.save_image()
+
+    def tearDown(self):
+        Category.objects.all().delete()
+        Location.objects.all().delete()
+        Image.objects.all().delete()
+
+    def test_save_image(self):
+        images = Image.objects.all()
+        self.assertTrue(len(images) > 0)
