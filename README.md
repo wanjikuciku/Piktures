@@ -1,3 +1,16 @@
+# Collage
+This is a website that allows users to post blogs and comment on them 3th March 2019
+### By Lorna wanjiku
+
+## Description
+This is a website that allows app's users to post blogs and view blogs.
+
+## Specifications
+Users can view most recent blog posts
+Users can comment on blog posts
+Users can register and login to become writers
+Writers can create new blog posts
+
 ## Setup/Installation Requirements
 To start using this project use the following commands:
 
