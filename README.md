@@ -62,6 +62,7 @@ None known at the moment.
 * Python
 * HTML
 * Django micro-framework
+* W3 schools
 * Bootstrap(used for styling)
 
 ## License
