@@ -46,9 +46,9 @@ python manage.py runserver
 |  Behaviour |  Input  |  Output |
 |------------|---------|---------|
 | Home | - | - |
-|view pictures | click on  | All posts are displayed starting with the most recent|
+|view pictures | click on  | All posts are displayed starting with the most recent |
 |Click on location | enter a location | pictures |
-|Write Blogs | Click on New Blog |	A form for a new blog is displayed|
+|Search icon | Search on a category |images are displayed |
 
 ## Prerequisites
 You need the following to work on the project: -Python version 3.6 -Flask -Pip -virtualenv -A text Editor
