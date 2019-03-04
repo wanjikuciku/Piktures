@@ -18,32 +18,27 @@ To start using this project use the following commands:
 * atom .
 * code . (this is if Visual Studio Code is your preferred text editor)
 
-1.The repo comes in a zipped or compressed format. Extract to your prefered location and open it.
+* The repo comes in a zipped or compressed format. Extract to your prefered location and open it.
 
-2.open your terminal and navigate to gallery then create a virtual environment.For detailed guide refer here
+* open your terminal and navigate to gallery then create a virtual environment.For detailed guide refer here
 
-3.To run the app, you'll have to run the following commands in your terminal
+* To run the app, you'll have to run the following commands in your terminal
 
 pip install -r requirements.txt
-On your terminal,Create database gallery using the command below.
+
+* On your terminal,Create database gallery using the command below.
 
 CREATE DATABASE gallery;
-Migrate the database using the command below
+
+* Migrate the database using the command below
 
 python3.6 manage.py migrate
-Then serve the app, so that the app will be available on localhost:8000, to do this run the command below
+
+* Then serve the app, so that the app will be available on localhost:8000, to do this run the command below
 
 python manage.py runserver
-Use the navigation bar/navbar/navigation pane/menu to navigate and explore the app.
 
-
-
- To run this program
-* Create a virtual environment by python3.6 -m venv --without-pip virtual then activate the virtual environment
-* Read the specs and requirements files and install all requirements by pip install -r requirements.txt
-* create a start.sh file and hide it in gitignore
-* Edit the start.sh file with your email account and password and add python3.6 manage.py server so as to serve
-* enter the code chmod a+x start.sh then ./start.sh to serve
+* Use the navigation bar/navbar/navigation pane/menu to navigate and explore the app.
 
 * access the application on this localhost address http://127.0.0.1:5000
 
@@ -51,9 +46,8 @@ Use the navigation bar/navbar/navigation pane/menu to navigate and explore the a
 |  Behaviour |  Input  |  Output |
 |------------|---------|---------|
 | Home | - | - |
-|Click on login button | fill credentials | blogs |
-|view blogs | click on view | All posts are displayed starting with the most recent|
-|Delete Blog| Click on Delete | Post is deleted|
+|view pictures | click on  | All posts are displayed starting with the most recent|
+|Click on location | enter a location | pictures |
 |Write Blogs | Click on New Blog |	A form for a new blog is displayed|
 
 ## Prerequisites
