@@ -16,13 +16,14 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Locations
-          </a>
-          <div display='block' class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+          <div class="w3-dropdown-hover">
+              <button class="w3-button">Locations</button>
+          <div class="w3-dropdown-content w3-bar-block w3-border">
             {% for location in locations %}
-              <a class="dropdown-item" href="{% url 'displayLocation' location.id%}">{{location.name}}</a>
+              <a class="w3-bar-item w3-button" href="{% url 'displayLocation' location.id%}">{{location.name}}</a>
             {% endfor %}
+          </div>
           </div>
         </li>
       </ul>
