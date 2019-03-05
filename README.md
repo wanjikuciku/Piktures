@@ -40,7 +40,7 @@ python manage.py runserver
 
 * Use the navigation bar/navbar/navigation pane/menu to navigate and explore the app.
 
-* access the application on this localhost address http://127.0.0.1:5000
+* access the application on this localhost address http://127.0.0.1:8000
 
 ## Behaviour Driven Development
 |  Behaviour |  Input  |  Output |
