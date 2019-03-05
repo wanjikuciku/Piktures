@@ -56,7 +56,7 @@ You need the following to work on the project: -Python version 3.6 -Django -Pip 
 ## Link to Live Website https://lornapiktures.herokuapp.com/
 
 ## Known Bugs
-None known at the moment.
+None at the moment, but if found please contact.
 
 ## Technologies Used
 * Python
