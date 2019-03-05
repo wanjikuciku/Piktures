@@ -26,7 +26,7 @@ To start using this project use the following commands:
 
 pip install -r requirements.txt
 
-* On your terminal,Create database gallery using the command below.
+* On your terminal,Create database piktures2 using the command below.
 
 CREATE DATABASE piktures2;
 
