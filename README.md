@@ -53,7 +53,7 @@ python manage.py runserver
 ## Prerequisites
 You need the following to work on the project: -Python version 3.6 -Django -Pip -virtualenv -A text Editor
 
-## Link to Live Website
+## Link to Live Website https://lornapiktures.herokuapp.com/
 
 ## Known Bugs
 None known at the moment.
