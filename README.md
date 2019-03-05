@@ -46,7 +46,6 @@ python manage.py runserver
 |  Behaviour |  Input  |  Output |
 |------------|---------|---------|
 | Home | - | - |
-|view pictures | click on  | All posts are displayed starting with the most recent |
 |Click on location | enter a location | pictures |
 |Search icon | Search on a category |images are displayed |
 
