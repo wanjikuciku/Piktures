@@ -3,7 +3,7 @@ This is a website made for sharing photos. 3th March 2019
 ### By Lorna wanjiku
 
 ## Description
-This is a website that allows app's users to view pictures and search for categories and locations.
+This is a website that allows app's users to view pictures and search for categories and locations of their choise.
 
 ## Specifications
 Users can view pictures.
@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 * On your terminal,Create database gallery using the command below.
 
-CREATE DATABASE piktures;
+CREATE DATABASE piktures2;
 
 * Migrate the database using the command below
 
